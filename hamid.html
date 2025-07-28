@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Page Title -->
+    <title>Hᴀᴍɪᴅ ! | Portfolio</title>
+	<link rel="canonical" href="https://n0step.xyz">
+    <!-- Meta Tags -->
+    <meta name="description" content="I'm n0step_, a passionate Front/BackEnd Developer  &amp; frontend developer.">
+    <meta name="keywords" content="n0step, dornox, krushna, krushna vyas, portfolio, krushna portfolio, dornox portfolio, n0step portfolio, Krushna Vyas">
+    <meta name="author" content="Krushna Vyas">
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="favicons/.-3307-favicon.ico" sizes="any">
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/7255-images-apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="n0step_ - Front/BackEnd Developer  | Portoflio">
+    <meta property="og:description" content="I'm n0step_, a passionate Front/BackEnd Developer  &amp; frontend developer.">
+    <meta property="og:url" content="https://n0step.xyz/">
+    <meta property="og:image">
+    <!-- Facebook Metadata End -->
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" href="css/css-loader.css">
+    <link rel="stylesheet" type="text/css" href="css/css-plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/css-main.css">
+    <!-- Template Styles End -->
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+    <meta name="msapplication-navbutton-color" content="#111111">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Custom Browser Color End -->
+     <style>
+/* Modal background */
+.cv-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.cv-modal-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Show animation */
+.cv-modal.show .cv-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* CV Image */
+.cv-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+.cv-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+</style>
+<style>
+#zoomLens {
+  position: absolute;
+  border: 2px solid #000;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: none;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10000;
+  display: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  background-repeat: no-repeat;
+}
+</style>
+
+
+
+
+  </head>
+  <body>
+    
+    <!-- Loader Start -->
+    <div id="loader" class="loader">
+      <div id="loaderContent" class="loader__content">
+        <div class="loader__shadow"></div>
+        <div class="loader__box"></div>
+      </div>
+    </div>
+    <!-- Loader End -->
+    <!-- Header Start -->
+  
+
+<!-- Modal Structure -->
+<div id="cvModal" class="cv-modal">
+  <div class="cv-modal-content">
+    <span class="cv-close">&times;</span>
+    <img src="images/cv.png" alt="CV Image" class="cv-image" id="cvImage" />
+  </div>
+</div>
+
+
+    <header id="header" class="header d-flex justify-content-between">
+      <!-- Navigation Menu Start -->
+      <div class="header__navigation">
+        <nav id="menu" class="menu">
+          <ul class="menu__list d-flex justify-content-start">
+            <li class="menu__item">
+              <a class="menu__link btn" href="#home">
+                <span class="menu__caption">Home</span>
+                <i class="ph-bold ph-house-simple"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#portfolio">
+                <span class="menu__caption">Portfolio</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#about">
+                <span class="menu__caption">About Me</span>
+                <i class="ph-bold ph-user"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#contact">
+                <span class="menu__caption">Contact</span>
+                <i class="ph-bold ph-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Navigation Menu End -->
+      <!-- Header Controls Start -->
+      <div class="header__controls d-flex justify-content-end">
+        <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+        <a id="notify-trigger" class="header__trigger btn" href="https://discord.com/users/1178358482588680234">
+          <span class="trigger__caption">Meet me</span>
+          <i class="ph-bold ph-chat-dots"></i>
+        </a>
+      </div>
+      <!-- Header Controls End -->
+    </header>
+    <!-- Header End -->
+    <!-- Gradient Background Start -->
+    <div class="gradient-background">
+      <div class="blur"></div>
+      <div class="blur"></div>
+      <div class="blur"></div>
+    </div>
+    <!-- Gradient Background End -->
+    <!-- Avatar Side Block Start -->
+    <div id="avatar" class="avatar">
+      <div class="avatar__container d-flex flex-column justify-content-lg-between">
+        <!-- image and logo -->
+        <div class="avatar__block">
+          <div class="avatar__logo d-flex align-items-center">
+            <div class="logo__image">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="85px" height="85px" viewbox="0 0 85 85" style="enable-background:new 0 0 85 85;" xml:space="preserve" class="gradient-fill">
+                <style type="text/css">
+                  .gradient-fill {
+                    fill: url(index.html#gradientFill);
+                  }
+                </style>
+                <g>
+                  <lineargradient id="gradientFill" gradientunits="userSpaceOnUse" x1="9.9604" y1="75.0338" x2="75.0387" y2="9.9555">
+                    <stop offset="0" style="stop-color:var(--accent)"></stop>
+                    <stop offset="1" style="stop-color:var(--secondary)"></stop>
+                  </lineargradient>
+                  <path class="gradient-fill" d="M51,0H34C15.2,0,0,15.2,0,34v17c0,14.3,8.9,26.6,21.4,31.6c0,0,0,0,0,0l0,0C25.3,84.1,29.5,85,34,85h17
+                    c6,0,11.7-1.6,16.6-4.3c0.1-0.1,0.2-0.1,0.3-0.2C78.1,74.6,85,63.6,85,51V34C85,15.2,69.8,0,51,0z M83,51c0,10.7-5.3,20.2-13.4,26
+                    v-2.5v-3.9h3.9v-3.9h-3.9v-3.9h3.9v-3.9h-3.9H67v-3.9V51h-3.9v3.9v3.9h2.6v3.9v3.9v3.9h-3.9h-3.9v3.9h3.9h3.9v3.9v1
+                    C61.3,81.7,56.3,83,51,83H34c-4.5,0-8.7-0.9-12.6-2.6v-2v-3.9h3.9h3.9v-3.9h-3.9h-3.9v-3.9v-3.9v-3.9H24v-3.9V51h-3.9v3.9v3.9h-2.6
+                    h-3.9v3.9h3.9v3.9h-3.9v3.9h3.9v3.9v3.9C8.2,72.8,2,62.6,2,51V34C2,16.4,16.4,2,34,2h17c17.6,0,32,14.4,32,32V51z M50.1,54.9H54
+                    v3.9v3.9h-3.9v-3.9V54.9z M33.1,54.9H37v3.9v3.9h-3.9v-3.9V54.9z M27.9,51H24v-3.9v-3.9v-3.9h3.9v3.9v3.9V51z M31.8,39.3h-3.9v-3.9
+                    h3.9V39.3z M31.8,43.2v-3.9h3.9v3.9H31.8z M63.1,47.1V51h-3.9v-3.9v-3.9v-3.9h3.9v3.9V47.1z M35.7,47.1v-3.9h3.9h3.9h3.9h3.9v3.9
+                    h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="logo__caption">
+              <p>Hᴀᴍɪᴅ !</p>
+            </div>
+          </div>
+          <div class="avatar__image">
+            <img src="images/images-dornox-pfp.png" alt="n0step-pfp">
+          </div>
+        </div>
+        <!-- data caption #1 -->
+        <div class="avatar__block">
+          <h6>
+            <small class="top">Specialization:</small>
+            Front/BackEnd Developer <br>and frontend developer
+          </h6>
+        </div>
+        <!-- data caption #2 -->
+        <div class="avatar__block">
+          <h6>
+            <small class="top">Based in:</small>
+            Kamalia, Punjab
+          </h6>
+        </div>
+        <!-- socials and CTA button -->
+        <div class="avatar__block">
+          <div class="avatar__btnholder">
+            <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent" href="#contact" target="_blank">
+              <span class="btn-caption">Let's Work Together!</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Avatar Side Block End -->
+    <!-- Page Content Start -->
+    <div id="content" class="content">
+      <div class="content__wrapper">
+        <!-- Intro Section Start -->
+        <section id="home" class="main intro">
+          <!-- Headline Start -->
+          <div id="headline" class="headline d-flex align-items-start flex-column" data-speed="1">
+            <p class="headline__subtitle animate-headline">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewbox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
+              </svg>
+              <span>Coder for a reason</span>
+            </p>
+            <h1 class="headline__title animate-headline">I'm Hᴀᴍɪᴅ !<br>A passionate Front/BackEnd Developer .</h1>
+            <div class="headline__btnholder d-flex flex-column flex-sm-row">
+              <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline" href="#portfolio">
+                <span class="btn-caption">My Works</span>
+                <i class="ph-bold ph-squares-four"></i>
+              </a>
+              <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="https://discord.com/oauth2/authorize?client_id=1247608321880490194">
+                <span class="btn-caption">Hamid.exe</span>
+                <i class="ph-bold ph-link-simple"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Headline End -->
+          <!-- Scroll Button Start -->
+          <div class="rotating-btn">
+            <a href="#portfolio" class="rotating-btn__link slide-down">
+              <!-- SVG rotating text -->
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve" class="animate-rotation" data-value="360">
+                <defs>
+                  <path id="textPath" d="M110,59.5c0,27.6-22.4,50-50,50s-50-22.4-50-50s22.4-50,50-50S110,31.9,110,59.5z"></path>
+                </defs>
+                <g>
+                  <use xlink:href="#textPath" fill="none"></use>
+                  <text>
+                    <!-- button text here!!! -->
+                    <textpath xlink:href="#textPath">Scroll for More * Scroll for More * </textpath>
+                  </text>
+                </g>
+              </svg>
+              <!-- arrow icon -->
+              <i class="ph-bold ph-arrow-down"></i>
+            </a>
+          </div>
+          <!-- Scroll Button End -->
+        </section>
+        <!-- Intro Section End -->
+
+        <!-- About Section Start -->
+        <section id="about" class="inner about">
+          <!-- Content Block - H2 Section Title Start -->
+          <div class="content__block section-grid-title">
+            <p class="h2__subtitle animate-in-up">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewbox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
+              </svg>
+              <span>About Me</span>
+            </p>
+            <h2 class="h2__title animate-in-up">Turning complex problems into simple design</h2>
+          </div>
+          <!-- Content Block - H2 Section Title End -->
+          <!-- Content Block - Achievements Start -->
+          <div class="content__block grid-block">
+            <div class="achievements d-flex flex-column flex-md-row align-items-md-stretch">
+              <!-- achievements single item -->
+              <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+                <div class="achievements__card">
+                  <p class="achievements__number">136+</p>
+                  <p class="achievements__descr">Happy clients</p>
+                </div>
+              </div>
+              <!-- achievements single item -->
+              <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+                <div class="achievements__card">
+                  <p class="achievements__number">6+</p>
+                  <p class="achievements__descr">Years of experience</p>
+                </div>
+              </div>
+              <!-- achievements single item -->
+              <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+                <div class="achievements__card">
+                  <p class="achievements__number">70+</p>
+                  <p class="achievements__descr">Projects done</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - Achievements End -->
+          <!-- Content Block - About Me Data Start -->
+          <div class="content__block grid-block block-large">
+            <div class="container-fluid p-0">
+              <div class="row g-0 justify-content-between">
+                <!-- About Me Description Start -->
+                <div class="col-12 col-xl-8 grid-item about-descr">
+                  <p class="about-descr__text animate-in-up">
+                    I wonder if I've been changed in the night? Let me think. Was I the same when I got up this morning? 
+                    I almost think I can remember feeling a little different. 
+                    But if I'm not the same, the 
+                    <a href="#0" class="text-link">next question</a> 
+                    is 'Who in the world am I?' Ah, that's the great puzzle!
+                  </p>
+                  <p class="about-descr__text animate-in-up">
+                    Be what you would seem to be - or, if you'd like it put more simply - never imagine yourself not to be otherwise 
+                    than what it might appear to others that what you were or 
+                    <a href="#0" class="text-link">might have been</a> 
+                    was not otherwise than what you had been 
+                    would have appeared to them to be otherwise.
+                  </p>
+                  <div class="btn-group about-descr__btnholder animate-in-up">
+                    <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="https://i.postimg.cc/KxP7Bbpt/MY-CV.png?dl=1">
+                      <span class="btn-caption">Download CV</span> 
+                      <i class="ph-bold ph-download-simple"></i>
+                    </a>
+
+                       <!-- View CV Button -->
+<a class="btn mobile-vertical btn-default btn-hover btn-hover-accent" href="#0" id="viewCvBtn">
+  <span class="btn-caption">View CV</span> 
+  <i class="ph-bold ph-eye"></i>
+</a>
+
+
+
+
+
+                  </div>
+                  
+                </div>
+                <!-- About Me Description End -->
+                <!-- About Me Information Start -->
+                <div class="col-12 col-xl-4 grid-item about-info">
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Name</small>
+                      Hamid Ali.
+                    </h6>
+                  </div>
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Email</small>
+                      <a class="text-link-bold" href="mailto:hamidalimadni05@gmail.com?subject=Message%20from%20portfolio">hamidalimadni05@gmail.com</a>
+                    </h6>
+                  </div>
+                  <div class="about-info__item animate-in-up">
+                    <h6>
+                      <small class="top">Location</small>
+                      <a class="text-link-bold" href="hamid.html">Kamalia, Punjab</a>
+                    </h6>
+                  </div>
+                </div>
+                <!-- About Me Information End -->
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - About Me Data End -->
+        </section>
+        <!-- About Section End -->
+          <!-- Content Block - Experience Start -->
+          <div class="content__block block-large">
+            <!-- H3 Block Start -->
+            <div class="section-h3">
+              <h3 class="h3__title animate-in-up">Work experience</h3>
+            </div>
+            <!-- H3 Block End -->
+            <!-- Experience Lines Start -->
+            <div class="container-fluid p-0 resume-lines">
+ <!-- experience single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2022 - now</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Front/BackEnd Developer , Discord Bot Developer, Website Designer</h5>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">I am actively involved in creating user interfaces for mobile apps and websites.</p>
+                </div>
+              </div>
+              <!-- experience single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2023 - 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Discord bot developer</h5>
+                  <p class="resume-lines__source animate-in-up">in the
+                    <a href="#" class="text-link-bold" target="_blank">Orbital Studios</a>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">I used to create discord bot that automate multiple jobs ranging from moderation to other utilities.</p>
+                </div>
+              </div>
+             <!-- experience single item -->
+              <div class="row g-0 resume-lines__item animate-in-up">
+                <div class="col-12 col-md-2">
+                  <span class="resume-lines__date animate-in-up">2023 - 2025</span>
+                </div>
+                <div class="col-12 col-md-5">
+                  <h5 class="resume-lines__title animate-in-up">Fiverr Freelancer</h5>
+                  <p class="resume-lines__source animate-in-up">in the
+                    <a href="https://www.fiverr.com/hamidalimadni" class="text-link-bold" target="_blank">Fiverr.com</a>
+                  </p>
+                </div>
+                <div class="col-12 col-md-5">
+                  <p class="small resume-lines__descr animate-in-up">Crafting cool code & creative solutions, one gig at a time! 🚀
+Helping clients turn ideas into reality with clean code and a smile</p>
+                </div>
+              </div>
+              
+            </div>
+            <!-- Experience Lines End -->
+          </div>
+          <!-- Content Block - Experience End -->
+          <!-- Content Block - H3 Block Start -->
+          <div class="content__block">
+            <div class="section-h3 section-h3-grid">
+              <h3 class="h3__title animate-in-up">My favourite tools</h3>
+            </div>
+          </div>
+          <!-- Content Block - H3 Block End -->
+          <!-- Content Block - Tools List Start -->
+          <div class="content__block grid-block block-large">
+            <!-- Tools List Start -->
+            <div class="tools-cards d-flex justify-content-start flex-wrap">
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-icon-html.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Html</h6>
+                </div>
+              </div>
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-icon-css.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">CSS</h6>
+                </div>
+              </div>
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-icon-javascript.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Javascript</h6>
+                </div>
+              </div>
+               <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-icon-photoshop.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Photoshop</h6>
+                </div>
+              </div>
+               <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-icon-photoshop1.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Illustrator</h6>
+                </div>
+              </div>
+             <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/1.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Premiere Pro</h6>
+                </div>
+              </div>
+             <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/2.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">After Effects</h6>
+                </div>
+              </div>
+             <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/3.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Python</h6>
+                </div>
+              </div>
+             
+             
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-web-nextjs.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Nextjs</h6>
+                </div>
+              </div>
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-web-reactjs.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Reactjs</h6>
+                </div>
+              </div>
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-web-vuejs.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Vuejs</h6>
+                </div>
+              </div>
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-web-tailwind.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Tailwindcss</h6>
+                </div>
+              </div>
+              
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-icon-figma.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Figma</h6>
+                </div>
+              </div>
+            
+             
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-tool-git.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Git</h6>
+                </div>
+              </div>
+              <!-- tools simgle item -->
+              <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+                <div class="tools-cards__card">
+                  <img class="tools-cards__icon animate-in-up" src="images/images-tool-filezilla.svg" alt="Tools Icon">
+                  <h6 class="tools-cards__caption animate-in-up">Filezilla</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Tools List End -->
+          </div>
+          <!-- Content Block - Tools List End -->
+          <!-- Content Block - H2 Block Start -->
+          <div class="content__block section-title">
+            <p class="h2__subtitle animate-in-up">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewbox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
+              </svg>
+              <span>Testimonials</span>
+            </p>
+            <h2 class="h2__title animate-in-up">Clients say about me</h2>
+          </div>
+          <!-- Content Block - H2 Block End -->
+          <!-- Content Block - Testimonials Slider Start -->
+          <div class="content__block">
+            <!-- Testimonials Slider Start -->
+            <div class="testimonials-slider">
+              <!-- slider main container -->
+              <div class="swiper-testimonials">
+                <!-- additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- slides -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/images-virtualrez.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">haroldvivas</p>
+                          <p class="tauthor__position">Got his 
+                            <a href="https://virtualrez.com/" class="text-link-bold">Banner</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Hamid quickly understood the task and completed the work in record time. Thank you! </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card  animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex  animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/images-iconicmurph.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">psb_designs</p>
+                          <p class="tauthor__position">Got their
+                            <a href="#0" class="text-link-bold" target="_blank">Logo</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Beyond outstanding work! Also, by far the fastest delivery I have ever received. No revisions were needed. I would 100% recommend this designer and return to him the next time I need any digital work done. Thank you!! </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/images-toxic.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">alivia_jonna</p>
+                          <p class="tauthor__position">Got his 
+                            <a href="#" class="text-link-bold" target="_blank">Banner</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Hamid Ali Madni brilliantly captured Messi and Ronaldo in banners, blending traditional and digital design. His dedication and detailed work ethic shone through, creating vibrant, inspirational pieces that transcend mere portraits to celebrate football greatness. Madni's talent sets a new standard in sports graphic design, showcasing his exceptional skill. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/images-toxic.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">alivia_jonna</p>
+                          <p class="tauthor__position">Got his 
+                            <a href="#0" class="text-link-bold" target="_blank">Banner</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Hamid on Fiverr delivered a fantastic house illustration promptly and professionally. 5 stars! Highly recommended. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/images-toxic.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">alivia_jonna</p>
+                          <p class="tauthor__position">Got his 
+                            <a href="#" class="text-link-bold">Banner</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Hamid Ali Madni brilliantly captured Messi and Ronaldo in banners, blending traditional and digital design. His dedication and detailed work ethic shone through, creating vibrant, inspirational pieces that transcend mere portraits to celebrate football greatness. Madni's talent sets a new standard in sports graphic design, showcasing his exceptional skill. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/fbastore.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">fbastore</p>
+                          <p class="tauthor__position">Got her 
+                            <a href="#" class="text-link-bold">Discord Bot</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Hamid is great! Quick and does what you request. I definitely would recommend his services and will be using his services again</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/umaira92.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">umaira92</p>
+                          <p class="tauthor__position">Got his
+                            <a href="#0" class="text-link-bold" target="_blank">Photo Editing</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>I will buy again. Great service. He did exactly what I was looking for. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/valemanica.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">valemanica</p>
+                          <p class="tauthor__position">Got his 
+                            <a href="#" class="text-link-bold">Software</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Again perfect service with good communication. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/valemanica.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">valemanica</p>
+                          <p class="tauthor__position">Got his
+                            <a href="#0" class="text-link-bold" target="_blank">Banner</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Good service fast delivery with good communication. </p>
+                      </div>
+                    </div>
+                  </div>
+
+ <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/jamesjhon3.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">jamesjhon3</p>
+                          <p class="tauthor__position">Got his
+                            <a href="#0" class="text-link-bold" target="_blank">Discord Bot</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Highly recommended. Perfect service and fast delivery. </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/valemanica.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">valemanica</p>
+                          <p class="tauthor__position">Got his
+                            <a href="#0" class="text-link-bold" target="_blank">Design</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Awesome work with good communication. The design according to my requirements.</p>
+                      </div>
+                    </div>
+                  </div>
+ <div class="swiper-slide">
+                    <div class="testimonials-card animate-in-up">
+                      <div class="testimonials-card__tauthor d-flex animate-in-up">
+                        <div class="tauthor__avatar">
+                          <img src="images/valemanica.png" alt="Review Author">
+                        </div>
+                        <div class="tauthor__info d-flex flex-column justify-content-center">
+                          <p class="tauthor__name">valemanica</p>
+                          <p class="tauthor__position">Got his
+                            <a href="#0" class="text-link-bold" target="_blank">Logo</a>
+                            done.
+                          </p>
+                          <div class="tauthor__rating d-flex">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials-card__descr animate-in-up">
+                        <p>Good service fast delivery with good communication. Thanks,</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- navigation buttons -->
+                <div class="swiper-button-prev mxd-slider-btn-square mxd-slider-btn-square-prev animate-in-up">
+                  <a class="btn btn-square btn-square-s btn-outline slide-left" href="#0">
+                    <i class="ph-bold ph-caret-left"></i>
+                  </a>
+                </div>
+                <div class="swiper-button-next mxd-slider-btn-square mxd-slider-btn-square-next animate-in-up">
+                  <a class="btn btn-square btn-square-s btn-outline slide-right" href="#0">
+                    <i class="ph-bold ph-caret-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonials Slider End -->
+          </div>
+          <!-- Content Block - Testimonials Slider End -->
+        
+        <!-- Resume Section End -->
+        <!-- Contact Section Start -->
+        <section id="contact" class="inner contact">
+          <!-- Content Block - H2 Section Title Start -->
+          <div class="content__block section-title">
+            <p class="h2__subtitle  animate-in-up">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewbox="0 0 13 13" fill="currentColor">
+                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
+              </svg>
+              <span>Contact</span>
+            </p>
+            <h2 class="h2__title  animate-in-up">Let's make something awesome together!</h2>
+          </div>
+          <!-- Content Block - H2 Section Title End -->
+          <!-- Content Block - Contact Form Start -->
+          <div class="content__block grid-block block-grid-large">
+            <div class="form-container">
+              <!-- Reply Messages Start -->
+              <div class="form__reply centered text-center">
+                <i class="ph-bold ph-smiley reply__icon"></i>
+                <p class="reply__title">Done!</p>
+                <span class="reply__text">Thanks for your message. I'll get back as soon as possible.</span>
+              </div> 
+              <!-- Reply Messages End -->
+              <!-- Contact Form Start -->
+              <form class="form contact-form" id="contact-form">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Starter Template">
+                <input type="hidden" name="admin_email" value="support@n0step.xyz">
+                <input type="hidden" name="form_subject" value="Contact Form Message">
+                <!-- END Hidden Required Fields-->
+                <div class="container-fluid p-0">
+                  <div class="row gx-0">
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="text" name="Name" placeholder="Your Name*" required="">
+                    </div>
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="text" name="Company" placeholder="Company Name">
+                    </div>
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="email" name="E-mail" placeholder="Email Adress*" required="">
+                    </div>
+                    <div class="col-12 col-md-6 form__item animate-in-up">
+                      <input type="tel" name="Phone" placeholder="Phone Number">
+                    </div>
+                    <div class="col-12 form__item animate-in-up">
+                      <textarea name="Message" placeholder="A Few Words*" required=""></textarea>
+                    </div>
+                    <div class="col-12 form__item animate-in-up">
+                      <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
+                        <span class="btn-caption">Send Message</span>
+                        <i class="ph-bold ph-paper-plane-tilt"></i>
+                      </button>
+                    </div>
+
+                  <!-- Notification toast -->
+<div id="notif" class="notif">
+  <div class="notif-content">
+    <div class="notif-text">✅ Message Sent!</div>
+    <div class="notif-progress"></div>
+  </div>
+</div>
+
+
+</div>
+                  </div>
+                </div>
+              </form>
+              <!-- Contact Form End -->
+            <script>
+  const form = document.getElementById('contact-form');
+  const webhookUrl = 'https://discord.com/api/webhooks/1399376729415618632/6xJQQh1CE8m9UM18p5tIPjJdD6tiGgg3MGY63X46qT7SPBvDUeDWXtDTiTklKFnhsY9R';
+
+  const notif = document.getElementById('notif');
+  const progress = notif.querySelector('.notif-progress');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const payload = {};
+
+    for (const [key, value] of formData) {
+      payload[key] = value;
+    }
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `<@1178358482588680234> New form submission!`,
+        embeds: [{
+          title: 'New Form Submission',
+          fields: [
+            { name: 'Name', value: payload.Name || 'N/A', inline: true },
+            { name: 'Company', value: payload.Company || 'N/A', inline: true },
+            { name: 'Email', value: payload['E-mail'] || 'N/A', inline: true },
+            { name: 'Phone', value: payload.Phone || 'N/A', inline: true },
+            { name: 'Message', value: payload.Message || 'N/A', inline: false }
+          ],
+          color: 3447003
+        }]
+      })
+    })
+    .then(response => response.text())
+    .then(message => {
+      console.log(`Discord Webhook Response: ${message}`);
+
+      // Show notification animation
+      notif.classList.remove('active');
+      progress.style.transition = 'none';
+      progress.style.width = '100%';
+
+      void progress.offsetWidth; // force reflow
+
+      notif.classList.add('active');
+      progress.style.transition = 'width 3s linear';
+      progress.style.width = '0%';
+
+      // Hide after 3s
+      setTimeout(() => {
+        notif.classList.remove('active');
+        // Optionally clear the form here if needed
+        form.reset();
+      }, 3000);
+    })
+    .catch(error => console.error(`Error sending request: ${error}`));
+  });
+</script>
+
+            </div>
+          </div>
+          <!-- Content Block - Contact Form End -->
+          <!-- Content Block - Socials Cards Start -->
+          <div class="content__block grid-block">
+            <div class="socials-cards d-flex justify-content-start flex-wrap">
+              <!-- socials item -->
+              <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-github-logo"></i>
+                  <a class="socials-cards__link" href="https://github.com/madnikhan627" target="_blank"></a>
+                </div>
+              </div>
+              <!-- socials item -->
+              <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+                <div class="socials-cards__card">
+                  <i class="ph-bold ph-discord-logo"></i>
+                  <a class="socials-cards__link" href="https://discord.com/users/1178358482588680234" target="_blank"></a>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+          <!-- Content Block - Socials Cards End -->
+          <!-- Content Block - Teaser Start -->
+          <div class="content__block">
+            <div class="teaser">
+              <p class="teaser__text animate-in-up">Want to know more about me, tell me 
+                about your project or just to say hello? 
+                <a class="text-link-bold" href="mailto:hamidalimadni05@gmail.com?subject=Message%20from%20portfolio">Drop me a line</a> 
+                and I'll get back 
+                as soon as possible.
+              </p>
+            </div>
+          </div>
+          <!-- Content Block - Teaser End -->
+          <!-- Content Block - Contact Data Start -->
+          <div class="content__block">
+            <div class="container-fluid p-0 contact-lines animate-in-up">
+              <div class="row g-0 contact-lines__item">
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data">
+                  <p class="contact-lines__title animate-in-up">Location</p>
+                  <p class="contact-lines__text animate-in-up">
+                    <a class="text-link-bold" href="hamid.html">Kamalia, Pakistan</a>
+                  </p>
+                </div>
+                <!-- data item -->
+                <div class="col-12 col-md-4 contact-lines__data">
+                  <p class="contact-lines__title animate-in-up">Email</p>
+                  <p class="contact-lines__text animate-in-up">
+                    <a class="text-link-bold" href="mailto:hamidalimadni05@gmail.com?subject=Message%20from%20your%20site">hamidalimadni05@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Block - Contact Data End -->
+        </section>
+        <!-- Contact Section End -->
+      </div>
+    </div>
+    <!-- Page Content End -->
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <!--  Controls are self-explanatory. Order can be changed. -->
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share link-s" title="Share"></button>
+            <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Load Scripts Start -->
+    <script>
+      // Disable right-click context menu
+      window.addEventListener('contextmenu', function (e) {
+          e.preventDefault();
+      }, false);
+  </script>
+    <script src="js/1098-js-libs.min.js"></script>
+    <script>
+      const randomX = random(-400, 400);
+      const randomY = random(-200, 200);
+      const randomDelay = random(0, 50);
+      const randomTime = random(20, 40);
+      const randomTime2 = random(5, 12);
+      const randomAngle = random(-30, 150);
+      const blurs = gsap.utils.toArray(".blur");
+      blurs.forEach((blur) => {
+        gsap.set(blur, {
+          x: randomX(-1),
+          y: randomX(1),
+          rotation: randomAngle(-1)
+        });
+        moveX(blur, 1);
+        moveY(blur, -1);
+        rotate(blur, 1);
+      });
+      function rotate(target, direction) {
+        gsap.to(target, randomTime2(), {
+          rotation: randomAngle(direction),
+          ease: Sine.easeInOut,
+          onComplete: rotate,
+          onCompleteParams: [target, direction * -1]
+        });
+      }
+      function moveX(target, direction) {
+        gsap.to(target, randomTime(), {
+          x: randomX(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveX,
+          onCompleteParams: [target, direction * -1]
+        });
+      }
+      function moveY(target, direction) {
+        gsap.to(target, randomTime(), {
+          y: randomY(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveY,
+          onCompleteParams: [target, direction * -1]
+        });
+      }
+      function random(min, max) {
+        const delta = max - min;
+        return (direction = 1) => (min + delta * Math.random()) * direction;
+      }
+    </script>
+    <script src="js/1543-js-app.js"></script>
+    <script src="js/7780-js-gallery-init.js"></script>
+    <!-- Load Scripts End -->
+
+
+<script>
+  const btn = document.querySelector('.btn.btn-default[type="submit"]');
+  const notif = document.getElementById('notif');
+  const progress = notif.querySelector('.notif-progress');
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Reset state
+    notif.classList.remove('active');
+    progress.style.transition = 'none';
+    progress.style.width = '100%';
+
+    // Force reflow to reset animation
+    void progress.offsetWidth;
+
+    // Trigger animation
+    notif.classList.add('active');
+    progress.style.transition = 'width 3s linear';
+    progress.style.width = '0%';
+
+    // Hide after 3s
+    setTimeout(() => {
+      notif.classList.remove('active');
+    }, 3000);
+  });
+</script>
+<script>
+  const viewCvBtn = document.getElementById('viewCvBtn');
+  const cvModal = document.getElementById('cvModal');
+  const cvClose = document.querySelector('.cv-close');
+  const cvImage = document.getElementById('cvImage');
+
+  // Modal open
+  viewCvBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cvModal.style.display = 'flex';
+    setTimeout(() => {
+      cvModal.classList.add('show');
+    }, 10);
+  });
+
+  // Modal close
+  cvClose.addEventListener('click', () => {
+    closeModal();
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === cvModal) {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    cvModal.classList.remove('show');
+    setTimeout(() => {
+      cvModal.style.display = 'none';
+      zoomLens.style.display = 'none';
+    }, 300);
+  }
+
+  // Zoom lens setup
+  const zoomLens = document.createElement('div');
+  zoomLens.id = 'zoomLens';
+  document.body.appendChild(zoomLens);
+
+  const zoom = 3;
+  let isZooming = false;
+
+  cvImage.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    isZooming = true;
+    zoomLens.style.display = 'block';
+
+    const imgSrc = cvImage.getAttribute('src');
+    zoomLens.style.backgroundImage = `url('${imgSrc}')`;
+    zoomLens.style.backgroundSize = `${cvImage.width * zoom}px ${cvImage.height * zoom}px`;
+  });
+
+  cvImage.addEventListener('mouseup', () => {
+    isZooming = false;
+    zoomLens.style.display = 'none';
+  });
+
+  cvImage.addEventListener('mouseleave', () => {
+    isZooming = false;
+    zoomLens.style.display = 'none';
+  });
+
+  cvImage.addEventListener('mousemove', (e) => {
+    if (!isZooming) return;
+
+    const bounds = cvImage.getBoundingClientRect();
+    const x = e.clientX - bounds.left;
+    const y = e.clientY - bounds.top;
+
+    const pageX = e.pageX;
+    const pageY = e.pageY;
+
+    zoomLens.style.left = `${pageX - 60}px`;
+    zoomLens.style.top = `${pageY - 60}px`;
+
+    const bgX = -x * zoom + 60;
+    const bgY = -y * zoom + 60;
+
+    zoomLens.style.backgroundPosition = `${bgX}px ${bgY}px`;
+  });
+</script>
+
+
+
+
+</body></html>
